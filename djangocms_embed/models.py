@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 import logging
 
-from django.core.exceptions import ValidationError, ImproperlyConfigured
+from django.core.exceptions import ImproperlyConfigured, ValidationError
 from django.db import models
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
@@ -14,7 +14,6 @@ from embedly import Embedly
 from jsonfield import JSONField
 
 from .conf import settings
-
 
 logger = logging.getLogger('djangocms_embed')
 
