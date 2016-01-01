@@ -47,7 +47,7 @@ setup(
     zip_safe=False,
     keywords='djangocms-embed',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Framework :: Django',
         'Framework :: Django :: 1.7',
         'Framework :: Django :: 1.8',
