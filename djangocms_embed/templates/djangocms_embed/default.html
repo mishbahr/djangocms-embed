@@ -1,0 +1,25 @@
+{% load i18n sekizai_tags %}
+
+<div class="embed-wrapper {{ instance.get_type }} {{ instance.get_provider|slugify }}">
+    <blockquote class="embedly-card" data-card-controls="0" data-card-chrome="0" data-card-width="100%" data-card-key="{{ api_key }}">
+      <h4><a href="{{ instance.url }}">{{ instance.get_title }}</a></h4>
+      <p>
+        {{ instance.get_description }}
+      </p>
+    </blockquote>
+</div>
+
+{% addtoblock 'js' %}
+    <script type="text/javascript">
+      (function(w, d){
+       var id='embedly-platform', n = 'script';
+       if (!d.getElementById(id)){
+         w.embedly = w.embedly || function() {(w.embedly.q = w.embedly.q || []).push(arguments);};
+         var e = d.createElement(n); e.id = id; e.async=1;
+         e.src = ('https:' === document.location.protocol ? 'https' : 'http') + '://cdn.embedly.com/widgets/platform.js';
+         var s = d.getElementsByTagName(n)[0];
+         s.parentNode.insertBefore(e, s);
+       }
+      })(window, document);
+    </script>
+{% endaddtoblock %}
