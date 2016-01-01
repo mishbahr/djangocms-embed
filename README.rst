@@ -16,16 +16,14 @@ djangocms-embed
     :alt: License
 
 
-djangocms-embed supports more than 300+ content providers. Video, audio, photos, product and more.
+Embedly supports more than 300+ content providers. Video, audio, photos, product and more. See http://embed.ly/providers
 
-See http://embed.ly/providers
-
-You will need a Embedly API key, Sign up for an API key at http://app.embed.ly/signup
+You will need a Embedly API key, you can sign up for an API key at http://app.embed.ly/signup
 
 Features
 --------
 
-* Uses the embed.ly API
+* Uses the Embedly API
 * Embeds indexable by search engines (SEO-friendly)
 
 Make your Embeds Visible to Search Engines. Your content looks like this to crawlers::
@@ -53,7 +51,6 @@ Embedly Features
 **Responsive Embed**
 
 Embeds are responsive and adapt to automatically fit the page they are placed in.
-
 
 **Google Analytics**
 
