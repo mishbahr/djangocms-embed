@@ -34,12 +34,12 @@ class Embed(CMSPlugin):
     def clean(self):
         # http://embed.ly/docs/api/extract/endpoints/1/extract#error-codes
         self.data = {}
-        if settings.EMBEDLY_OEMBED_API_KEY is None:
-            msg = _('EMBEDLY_OEMBED_API_KEY is not defined in the project settings.')
+        if settings.DJANGOCMS_EMBED_API_KEY is None:
+            msg = _('DJANGOCMS_EMBED_API_KEY is not defined in the project settings.')
             logger.error(msg)
             raise ImproperlyConfigured(msg)
 
-        client = Embedly(settings.EMBEDLY_OEMBED_API_KEY)
+        client = Embedly(settings.DJANGOCMS_EMBED_API_KEY)
 
         try:
             data = client.extract(self.url)

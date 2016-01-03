@@ -32,7 +32,7 @@ class EmbedPlugin(CMSPluginBase):
     def render(self, context, instance, placeholder):
         context = super(EmbedPlugin, self).render(context, instance, placeholder)
         context.update({
-            'api_key': settings.EMBEDLY_OEMBED_API_KEY
+            'api_key': settings.DJANGOCMS_EMBED_API_KEY
         })
         return context
 
